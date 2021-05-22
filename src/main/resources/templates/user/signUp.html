@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" th:href="@{/styles/reg.css}">
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+</head>
+<body>
+<header>
+    <h1>
+        Школа английского языка
+    </h1>
+</header>
+<nav>
+
+</nav>
+<form name="signUpUser" method="post" action="/signuperror">
+<div>
+    <h2>Регистрация</h2>
+    <p>
+        <label for="emailInput" >Email</label>
+        <input class="form-control"
+               id="emailInput"
+               name="email" type="text" placeholder="email" required>
+    </p>
+    <span th:if="${Status} == 'email_exists'">
+        Пользователь с таким email уже существует
+    </span>
+    <p>
+    <label for="loginInput" >Логин</label>
+    <input class="form-control"
+           id="loginInput"
+           name="login" type="text" placeholder="login" required>
+    </p>
+<!--    <br>-->
+    <span th:if="${Status} == 'user_exists'">
+        Этот логин уже занят
+    </span>
+    <p>
+    <label for="passwordInput">Пароль</label>
+    <input class="form-control"
+           id="passwordInput"
+           name="password" type="password"
+           placeholder="password" required>
+<!--    <br>-->
+    </p>
+    <p>
+    <label for="matchingPasswordInput" >Повторите пароль</label>
+    <input class="form-control"
+           id="matchingPasswordInput"
+           name="password2" type="password"
+           placeholder="password" required>
+    </p>
+<!--    <br>-->
+    <span th:if="${Status} == 'password!=password2'">
+        Введенные пароли не совпадают
+    </span>
+    <button type="submit">Зарегистрироваться</button>
+</div>
+</form>
+</body>
+</html>

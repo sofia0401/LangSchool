@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" th:href="@{/styles/adjs.css}">
+    <meta charset="UTF-8">
+    <title>Прилагательные</title>
+</head>
+<body>
+
+<header>
+    <h1>Adjectives</h1>
+    <button id="btn-out" type="button" onClick="location.href='/logout'">Выйти из аккаунта</button>
+
+</header>
+<nav>
+    <a th:href="@{/start/verb}">Глаголы</a>
+    <a th:href="@{/start/noun}">Существительные</a>
+    <a th:href="@{/start/adjective}">Прилагательные</a>
+
+</nav>
+<div>
+    <h2>
+        Теоретические сведения
+    </h2>
+    <button id="btn-test" type="button" onClick="location.href='/start/adjective/test'">Проверить свои знания</button>
+    <p class="theory">
+    <h3>Степени сравнения прилагательных</h3>
+    Изменяться по степени сравнения могут только качественные прилагательные,
+    которые обозначают какие-либо качества предмета и чье значение может быть выражено
+    в большей или меньшей степени. <br><br>
+
+    Существует три степени сравнения прилагательных в английском языке – <b>положительная</b>,
+    <b>сравнительная</b> и <b>превосходная</b>.<br><br>
+    Степени сравнения прилагательных могут быть образованы:<br>
+    <li> <b>синтетически</b> (при помощи суффиксов -er и -est)</li>
+    <li> <b>аналитически</b> (при помощи слов more-most, less-least)</li>
+    <li> <b>супплетивно</b> (такие исключения, как good-better-best)</li> <br><br>
+    <h3>Синтетический способ</h3>
+
+    <b>Синтетический</b> способ возможен только для прилагательных из одного слога и двухсложных прилагательных с ударением на последний слог:<br>
+
+    <b>new – newer – newest<br>
+        polite – politer – politest</b><br><br>
+    Также сюда входят двусложные слова оканчивающиеся на -ble, -er, -y, -some, -ow:<br>
+
+    <b>noble – nobler – noblest<br>
+    tender – tenderer – tenderest<br>
+    happy – happier – happiest<br>
+        narrow – narrower – narrowest</b><br><br>
+    При прибавлении суффиксов -er и -est нужно помнить о следующих правилах орфографии:<br><br>
+
+    Немое -e в конце слов опускается:<br>
+    <b>large – larger – largest<br>
+        brave – braver – bravest</b><br><br>
+    Если прилагательное оканчивается на краткую гласную и согласную, то
+    в сравнительной и превосходной степени конечная согласная удваивается:<br>
+    <b>hot – hotter – hottest<br>
+        big – bigger – biggest</b><br><br>
+    Если прилагательное оканчивается на согласную и букву -y, то
+    в сравнительной и превосходной степени конечная -y заменяется на -i:<br>
+    <b>easy – easier – easiest<br>
+        dirty – dirtier – dirtiest</b><br><br>
+    <h3>Аналитический способ</h3>
+    <b>Аналитический</b> способ используется для многосложных слов.
+    Для этого перед прилагательным ставятся слова more/most (более/наиболее), less/least (менее/наименее):<br>
+
+    effective – <b>more</b> effective – <b>most</b> effective<br>
+    dangerous – <b>more</b> dangerous – <b>most</b> dangerous<br><br>
+    <h3>Супплетивный способ</h3>
+
+    <b>Супплетивный</b> способ предполагает, что некоторые прилагательные
+    в английском языке образуют степени сравнения не по общим правилам
+    (при помощи своих супплетивных форм):<br>
+
+    <b>good – better – best<br>
+    bad – worse – worst<br>
+    little – less – least<br>
+    many – more – most<br>
+    far – farther, further – farthest, furthest<br>
+    old – older, elder – oldest, eldest</b><br><br>
+    Обратите внимание на различие в значении слов <b>farther/further</b> и <b>older/elder</b>.<br><br>
+
+    <b>farther – farthest</b> используется только в отношении физического расстояния:<br>
+
+    I live farther from school than Pete.<br>
+    Я живу дальше от школы, чем Пит.<br><br>
+    <b>further – furthest</b> имеет более широкое значение:<br>
+
+    You can find further information on our web-site.<br>
+    На нашем сайте вы сможете найти дальнейшую информацию.<br><br>
+    <b>elder – eldest</b> обозначает старшинство в семье:<br>
+
+    My elder sister lives in Sochi.<br>
+    Моя старшая сестра живет в Сочи.<br><br>
+    <b>older – oldest</b> обозначает возраст:<br>
+
+    This is the oldest cathedral in Europe.<br>
+    Это старейший собор в Европе.<br><br>
+<br>
+    </p>
+</div>
+</body>
+</html>

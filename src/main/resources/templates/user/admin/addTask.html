@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" th:href="@{/styles/adm/adminUsers.css}">
+    <meta charset="UTF-8">
+    <title>Добавить новое задание</title>
+</head>
+<body>
+<header>
+    <h2>Режим администратора</h2>
+    <button id="btn-out" type="button" onClick="location.href='/logout'">Выйти из аккаунта</button>
+
+</header>
+<nav>
+    <a th:href="@{/admin/users}">Все пользователи</a>
+    <a th:href="@{/admin/add}">Добавить задание</a>
+    <a th:href="@{/admin/alltasks}">Все задания</a>
+</nav>
+<form th:method="POST" th:action="@{/admin/added}" th:object="${task}">
+    <div>
+        <p>
+    <label for="ques">Введите вопрос: </label>
+    <input type="text" th:field="*{ques}" id="ques" required/>
+        </p>
+        <p>
+    <label for="ans">Введите ответ: </label>
+    <input type="text" th:field="*{ans}" id="ans" required/>
+        </p>
+        <p>
+    <label for="type">Введите часть речи: </label>
+    <input type="text" th:field="*{type}" id="type" required/>
+        </p>
+        <span id="added" th:if="${Status} == 'added'">
+        Задание успешно добавлено
+        </span>
+    <input id="btn-sub" type="submit" value="Добавить"/>
+    </div>
+</form>
+
+</body>
+</html>

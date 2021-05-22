@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" th:href="@{/styles/adm/adminUsers.css}">
+    <meta charset="UTF-8">
+    <title>Все пользователи</title>
+</head>
+<body>
+
+<header>
+    <h2>Режим администратора</h2>
+    <button id="btn-out" type="button" onClick="location.href='/logout'">Выйти из аккаунта</button>
+
+</header>
+<nav>
+    <a th:href="@{/admin/users}">Все пользователи</a>
+    <a th:href="@{/admin/add}">Добавить задание</a>
+    <a th:href="@{/admin/alltasks}">Все задания</a>
+</nav>
+<div>
+<!--    <button type="button" onClick="location.href='/admin/users/filteredById'">Сортировать по ID</button>-->
+    <p th:each="user: ${us}">
+
+        <span th:text="${'Пользователь ID '+user.getId() +': '
+           +'Логин: '+user.getLogin()+ ', Email: ' + user.getEmail()}">
+           </span>
+    </p>
+</div>
+</body>
+</html>

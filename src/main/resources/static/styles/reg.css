@@ -1,0 +1,50 @@
+body {
+    /*background-color: rgba(255,212,140,0.72);*/
+    background-color: aliceblue;
+}
+
+header {
+    text-align: center;
+    font-size: 24px;
+    display: block;
+    height: 90px;
+
+}
+nav {
+    display: block;
+    height: 30px;
+    width: available;
+    background-color: lightsteelblue;
+    margin-bottom: 20px;
+}
+div {
+    /*background-color: pink;*/
+    /*background-color: bisque;*/
+    background-color: rgba(255,172,174,0.72);
+    text-align: center;
+    border-style: solid;
+    border-color: lightsteelblue;
+    border-width: 15px;
+    border-radius: 5%;
+    width: 330px;
+    height: 280px;
+    padding: 10px 10px 1px;
+    margin: auto;
+}
+p {
+    position: relative;
+    margin: 4%;
+}
+
+span{
+    display: block;
+    position: relative;
+    /*margin-top: 5%;*/
+    /*margin: 1%;*/
+    background-color: orangered;
+}
+button{
+    position: relative;
+    margin-top: 1%;
+    margin-bottom: 5%;
+}

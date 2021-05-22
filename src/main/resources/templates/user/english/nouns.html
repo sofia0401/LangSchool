@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" th:href="@{/styles/nouns.css}">
+    <meta charset="UTF-8">
+    <title>Существительные</title>
+</head>
+<body>
+
+<header>
+    <h1>Nouns</h1>
+    <button id="btn-out" type="button" onClick="location.href='/logout'">Выйти из аккаунта</button>
+
+</header>
+<nav>
+    <a th:href="@{/start/verb}">Глаголы</a>
+    <a th:href="@{/start/noun}">Существительные</a>
+    <a th:href="@{/start/adjective}">Прилагательные</a>
+</nav>
+<div>
+    <h2>
+        Теоретические сведения
+    </h2>
+        <button id="btn-test" type="button" onClick="location.href='/start/noun/test'">Проверить свои знания</button>
+    <p class="theory">
+        <h3>Множественное число</h3>
+    Единственное число, обозначающее один предмет - singular:<br>
+    <b>cup</b> – чашка<br>
+    <b>gun</b> – пушка<br>
+    <b>bubble</b> – пузырёк<br><br>
+    Множественное число, обозначающее два и более предмета - plural:<br>
+    <b>three cups</b> – три чашки<br>
+    <b>two guns</b> – две пушки<br>
+    <b>thousands of bubbles</b> – тысячи пузырьков<br><br>
+    Формы множественного числа многих существительных в английском языке образуются добавлением в конец буквы s.
+    Но есть и другие случаи.<br><br>
+    Если существительное оканчивается на свистящий или шипящий звук,
+    то есть на буквы <b>s, ss, x, sh, ch</b>, то для него форма множественного числа образуется при помощи окончания -es [ iz ]:<br>
+    <b>bass</b> – <b>basses</b><br>
+    <b>match</b> – <b>matches</b><br>
+    <b>leash</b> – <b>leashes</b><br>
+    <b>box</b> – <b>boxes</b><br><br>
+
+    Если существительное оканчивается на букву -y, перед которой стоит согласная, то во множественном числе -y меняется на i и к слову прибавляется окончание -es:<br>
+
+    <b>lobby</b> – <b>lobbies</b><br>
+    <b>sky</b> – <b>skies</b><br><br>
+    <b>Исключения</b>: имена собственные (the two Germanys, the Gatsbys) и составные существительные (stand-bys).<br><br>
+
+    Если перед буквой -y стоит гласная, то множественное число образуется по общему правилу при помощи окончания -s, а буква y остается без изменений:<br>
+
+    <b>bay</b> – <b>bays</b><br>
+    <b>day</b> – <b>days</b><br>
+    <b>way</b> – <b>ways</b><br><br>
+    К существительным заканчивающимся на -o прибавляется окончание -es:<br>
+
+    <b>potato</b> – <b>potatoes</b><br>
+    <b>tomato</b> – <b>tomatoes</b><br>
+    <b>hero</b> – <b>heroes</b><br><br>
+    <b>Исключения</b>: bamboos, embryos, folios, kangaroos, radios, studios, zoos,
+    Eskimos, kilos, photos, pros, pianos, concertos, dynamos, solos, tangos, tobaccos.<br><br>
+
+    Если же существительное оканчивается на буквы -f или -fe, то во множественном числе они
+    меняются на -v- и прибавляется окончание -es:<br>
+
+    <b>thief</b> – <b>thieves</b><br>
+    <b>wolf</b> – <b>wolves</b><br>
+    <b>half</b> – <b>halves</b><br>
+    <b>wife</b> – <b>wives</b><br>
+    <h3>Исключения</h3>
+    Некоторые существительные по историческим причинам имеют свои собственные способы построения множественного числа:<br>
+
+    <b>man – men<br>
+    woman – women<br>
+    tooth – teeth<br>
+    foot – feet<br>
+    goose – geese<br>
+    mouse – mice<br>
+    child – children<br>
+        ox – oxen</b> <br><br>
+    Для некоторых слов форма единственного числа совпадает с формой множественного:<br>
+
+    <b>sheep – овца, овцы<br>
+    swine – свинья, свиньи<br>
+    deer – олень, олени<br>
+    grouse – куропатка, куропатки<br>
+    series – серия, серии<br>
+    species – вид, виды<br>
+        corps – корпус, корпусы (воен.)</b><br>
+    </p>
+</div>
+</body>
+</html>

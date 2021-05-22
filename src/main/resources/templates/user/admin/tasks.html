@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" th:href="@{/styles/adm/adminUsers.css}">
+    <meta charset="UTF-8">
+    <title>Все задания</title>
+</head>
+<body>
+
+<header>
+    <h2>Режим администратора</h2>
+    <button id="btn-out" type="button" onClick="location.href='/logout'">Выйти из аккаунта</button>
+</header>
+<nav>
+    <a th:href="@{/admin/users}">Все пользователи</a>
+    <a th:href="@{/admin/add}">Добавить задание</a>
+    <a th:href="@{/admin/alltasks}">Все задания</a>
+</nav>
+
+<div>
+
+    <button type="button" onClick="location.href='/admin/tasks/filteredById'">Сортировать по ID</button>
+    <button type="button" onClick="location.href='/admin/tasks/filteredByType'">Сортировать по части речи</button>
+<p th:each="t: ${ts}">
+
+           <span th:text="${'Задание ID '+t.getId() +': '
+           +'Вопрос: '+t.getQues() + ', Ответ: ' + t.getAns()+', Часть речи: ' + t.getType()}">
+           </span>
+</p>
+    <form th:method="DELETE" th:action="@{/admin/deleted}">
+        <p>
+            Введите ID задания для удаления:
+            <label for="taskID" ></label>
+            <input class="form-control"
+                   id="taskID"
+                   name="taskID" type="text" placeholder="ID">
+            <button type="submit">Удалить</button>
+
+        </p>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" th:href="@{/styles/nountest.css}">
+    <meta charset="UTF-8">
+    <title>Тест</title>
+</head>
+<body>
+
+<header>
+    <h1>Verbs</h1>
+    <button id="btn-out" type="button" onClick="location.href='/logout'">Выйти из аккаунта</button>
+</header>
+<nav>
+    <a th:href="@{/start/verb}">Глаголы</a>
+    <a th:href="@{/start/noun}">Существительные</a>
+    <a th:href="@{/start/adjective}">Прилагательные</a>
+
+</nav>
+<form name="verbTest" method="post" action="/start/verb/testchecked">
+    <div class="base">
+        <h3>Из двух предложенных вариантов выберите верный:</h3>
+        <div class="voprosy">
+            <p th:each="q: ${qs}">
+           <span th:text="${q.getQues()}">
+               Вопрос
+           </span>
+            </p>
+            <button id="btn-sub" type="submit">Check</button>
+        </div>
+        <div class="otvety">
+    <span class="ansForm">
+    <input class="form-control"
+           id="a1"
+           name="a1" type="text" placeholder="" >
+    </span>
+            <span class="false" th:if="${Status1} == 'wrong'">
+        Неверно. Правильный ответ: study.
+    </span>
+            <span class="true" th:if="${Status1} == 'correct'">
+        Верно.
+    </span>
+            <span class="ansForm">
+    <input class="form-control"
+           id="a2"
+           name="a2" type="text" placeholder="" >
+    </span>
+            <span class="false" th:if="${Status2} == 'wrong'">
+        Неверно. Правильный ответ: works.
+    </span>
+            <span class="true" th:if="${Status2} == 'correct'">
+        Верно.
+    </span>
+            <span class="ansForm">
+    <input class="form-control"
+           id="a3"
+           name="a3" type="text" placeholder="" >
+    </span>
+            <span class="false" th:if="${Status3} == 'wrong'">
+        Неверно. Правильный ответ: is.
+    </span>
+            <span class="true" th:if="${Status3} == 'correct'">
+        Верно.
+    </span>
+            <span class="ansForm">
+    <input class="form-control"
+           id="a4"
+           name="a4" type="text" placeholder="" >
+    </span>
+            <span class="false" th:if="${Status4} == 'wrong'">
+        Неверно. Правильный ответ: will.
+    </span>
+            <span class="true" th:if="${Status4} == 'correct'">
+        Верно.
+    </span>
+            <span class="ansForm">
+    <input class="form-control"
+           id="a5"
+           name="a5" type="text" placeholder="" >
+    </span>
+            <span class="false" th:if="${Status5} == 'wrong'">
+        Неверно. Правильный ответ: am.
+    </span>
+            <span class="true" th:if="${Status5} == 'correct'">
+        Верно.
+    </span>
+
+            <span class="ansForm">
+    <input class="form-control"
+           id="a6"
+           name="a6" type="text" placeholder="" >
+    </span>
+            <span class="false" th:if="${Status6} == 'wrong'">
+        Неверно. Правильный ответ: went.
+    </span>
+            <span class="true" th:if="${Status6} == 'correct'">
+        Верно.
+    </span>
+            <span class="ansForm">
+    <input class="form-control"
+           id="a7"
+           name="a7" type="text" placeholder="" >
+    </span>
+            <span class="false" th:if="${Status7} == 'wrong'">
+        Неверно. Правильный ответ: was.
+    </span>
+            <span class="true" th:if="${Status7} == 'correct'">
+        Верно.
+    </span>
+        </div>
+    </div>
+</form>
+</body>
+</html>

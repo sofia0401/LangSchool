@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <link rel="stylesheet" th:href="@{/styles/loginstyle.css}">
+    <meta charset="UTF-8">
+    <title>Вход в систему</title>
+</head>
+<body>
+<header>
+    <h1>
+        Школа английского языка
+    </h1>
+</header>
+<nav>
+
+</nav>
+<form th:action="@{/login}" th:method="post" >
+
+    <div>
+    <h2 class="form-signin-heading">Вход в систему</h2>
+    <p>
+        <label for="loginInput">Логин</label>
+        <input type="text" id="loginInput" name="username" class="form-control" placeholder="login" >
+    </p>
+    <p>
+        <label for="passwordInput">Пароль</label>
+        <input type="password" id="passwordInput" name="password" class="form-control" placeholder="password" >
+    </p>
+        <span>
+        <input type="checkbox" id="remember" name="remember-me">
+        <label for="remember">
+            Запомнить меня
+        </label>
+    <button type="submit">Войти</button>
+<!--        <button type="submit" onClick=th:href="@{/signUp}"> <a th:href="@{/signUp}"><p>Нет аккаунта? Зарегистрируйтесь</p></a></button>-->
+        </span>
+<br>
+    <button id="btn-reg" type="button" onClick="location.href='/signUp'">Нет аккаунта? Зарегистрируйтесь</button>
+    </div>
+</form>
+</body>
+</html>
